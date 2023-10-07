@@ -2,13 +2,18 @@ import React ,{useState}from "react";
 import { StyleSheet, View, Text, Image ,TouchableOpacity,Pressable,TextInput,Button} from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import ImagePicker from 'react-native-image-picker';
+import { useNavigation } from "@react-navigation/native";
+
 
 const FeedbackScreen = () => {
+    const navigation = useNavigation();
+
     const [rating, setRating] = useState(0);
 
     const send = () => {
         alert('Gửi đánh giá thành công');
         console.log('Gửi đánh giá thành công');
+        navigation.navigate("PassWordScreen");
     }
 
       

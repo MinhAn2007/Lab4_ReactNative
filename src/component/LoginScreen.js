@@ -1,12 +1,13 @@
 import React from 'react';
 
 import { StyleSheet, View, Text, Pressable, TextInput, Linking } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
 
 
 const LoginScreen = () => {
-
+    const navigation = useNavigation();
     const userName = ['minhan', 'minhanh', 'minhem'];
     const passWord = ['123456', '1234567', '12345678'];
 
@@ -31,6 +32,7 @@ const LoginScreen = () => {
         if (loginValueTest.hasOwnProperty(loginValue.name)) {
             if (loginValueTest[loginValue.name] === loginValue.password) {
                 alert('Đăng nhập thành công');
+                navigation.navigate("BuyScreen");
                 console.log('Đăng nhập thành công');
             } else {
                 alert('Mật khẩu không đúng' + '\n' +

@@ -1,5 +1,6 @@
 import React ,{useState}from "react";
 import { StyleSheet, View, Text, Image, Linking, TouchableOpacity,Pressable} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const BuyScreen = () => {
     const [count, setCount] = useState(1);
@@ -22,7 +23,11 @@ const BuyScreen = () => {
         setDiscountCodes(discountCodes.filter((item) => item !== code));
       }
     };
-  
+    const navigation = useNavigation();
+    const order = () => {
+      alert("Đặt hàng thành công");
+      navigation.navigate("FeedbackScreen");
+    };
     return (
         <View style={styles.header}>
           <Image style={styles.image} source={require('/assets/book.png')} />
@@ -67,7 +72,7 @@ const BuyScreen = () => {
             <Text style={{ marginTop: '142%', fontWeight: 'bold', fontSize: 24, marginLeft: '-115%' ,color:'#8e9490'}}>Thành Tiền
             </Text>
             <Text style={{color:'red',marginLeft:'30%',marginTop:'142%',fontSize:20,fontWeight:'bold'}}>{totalPrice} đ</Text>
-            <TouchableOpacity style={styles.buttonSend}>TIẾN HÀNH ĐẶT HÀNG</TouchableOpacity>
+            <TouchableOpacity style={styles.buttonSend} onPress={order}>TIẾN HÀNH ĐẶT HÀNG</TouchableOpacity>
 
         </View>
 
