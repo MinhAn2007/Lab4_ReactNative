@@ -102,11 +102,11 @@ const LoginScreen = () => {
 }
 const styles = StyleSheet.create({
     container: {
-        display: 'flex', // Đặt hiển thị thành flex
-        flex: 1, // Đặt flex thành 1
+        display: 'flex',
+        flex: 1, 
         backgroundColor: "#FBCB00",
-        width: '100%', // Đặt chiều rộng thành 100%
-        height: '100%', // Đặt chiều cao thành 100%
+        width: '100%', 
+        height: '100%', 
     },
     logoText: {
         marginTop: 80,
