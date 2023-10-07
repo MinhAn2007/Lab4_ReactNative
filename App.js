@@ -2,14 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LoginScreen from './src/component/LoginScreen';
 import FeedbackScreen from './src/component/FeedbackScreen';
-import PassWordScreen from './src/component/PassWord';
+import PassWordScreen from './src/component/PassWordScreen';
+import BuyScreen from './src/component/BuyScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <LoginScreen></LoginScreen> */}
       {/* <FeedbackScreen></FeedbackScreen> */}
-      <PassWordScreen></PassWordScreen>
+      {/* <PassWordScreen></PassWordScreen> */}
+      <BuyScreen></BuyScreen>
     </View>
   );
 }
