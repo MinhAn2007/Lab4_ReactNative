@@ -10,26 +10,7 @@ const FeedbackScreen = () => {
         alert('Gửi đánh giá thành công');
         console.log('Gửi đánh giá thành công');
     }
-    const openImagePicker = () => {
-        const options = {
-          title: 'Chọn hình ảnh',
-          storageOptions: {
-            skipBackup: true,
-            path: 'images',
-          },
-        };
-      
-        ImagePicker.showImagePicker(options, (response) => {
-          if (response.didCancel) {
-            console.log('Người dùng đã hủy bỏ');
-          } else if (response.error) {
-            console.log('Lỗi: ', response.error);
-          } else {
-            // response.uri chứa đường dẫn đến hình ảnh đã chọn
-            console.log('Đường dẫn hình ảnh: ', response.uri);
-          }
-        });
-      };
+
       
     const handleStarPress = (selectedRating) => {
       setRating(selectedRating);
