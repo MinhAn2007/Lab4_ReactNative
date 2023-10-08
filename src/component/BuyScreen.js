@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 const BuyScreen = () => {
     const [count, setCount] = useState(1);
     const [totalPrice, setTotalPrice] = useState(141800); // Giá ban đầu
-    const [discountCodes, setDiscountCodes] = useState(["MAGIAM1"]); // Các mã giảm giá
+    const [discountCodes, setDiscountCodes] = useState(["MAGIAM1"]); // mã giảm giá
   
     const handleButtonPress = (operation) => {
       if (operation === "+") {
@@ -73,7 +73,6 @@ const BuyScreen = () => {
             </Text>
             <Text style={{color:'red',marginLeft:'30%',marginTop:'142%',fontSize:20,fontWeight:'bold'}}>{totalPrice} đ</Text>
             <TouchableOpacity style={styles.buttonSend} onPress={order}>TIẾN HÀNH ĐẶT HÀNG</TouchableOpacity>
-
         </View>
 
       );
