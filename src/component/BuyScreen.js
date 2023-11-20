@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 const BuyScreen = () => {
     const [count, setCount] = useState(1);
     const [totalPrice, setTotalPrice] = useState(141800); // Giá ban đầu
-    const [discountCodes, setDiscountCodes] = useState(["MAGIAM1"]); // mã giảm giá12312312313
+    const [discountCodes, setDiscountCodes] = useState(["MAGIAM1"]); // mã giảm giá12312312313qưeqweq
   
     const handleButtonPress = (operation) => {
       if (operation === "+") {
